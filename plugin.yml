@@ -1,0 +1,9 @@
+name: Flyspeed
+main: com.blalp.flyspeed.FlySpeed
+version: 1.0
+
+commands:
+  flyspeed:
+   aliases: [fs]
+   usage: /<command> <ammount>
+   description: Sets flyspeed
