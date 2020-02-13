@@ -9,7 +9,7 @@ public class FlySpeed extends JavaPlugin {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
 		if(cmd.getName().equals("flyspeed")&&sender.hasPermission("fly.speed")){
 			if(args.length==0){
-				sender.sendMessage("You need an arg.");
+				sender.sendMessage("You need an arg 0.1-10.");
 			} else {
 				((Player)sender).setFlySpeed(Float.parseFloat(args[0]));
 			}
