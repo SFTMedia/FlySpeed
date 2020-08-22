@@ -15,6 +15,7 @@ public class FlySpeed extends JavaPlugin {
 				try {
 					if (Float.parseFloat(args[0])<-10||Float.parseFloat(args[0])>10){
 						sender.sendMessage("The max is a speed multiplier of 10");
+						return true;
 					}
 				} catch (Exception e){
 					sender.sendMessage("Please specify a number.");
