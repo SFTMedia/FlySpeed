@@ -3,7 +3,7 @@
 
 <groupId>com.blalp</groupId>
 <artifactId>flyspeed</artifactId>
-<version>1.0.0</version>
+<version>1.1.0</version>
 <packaging>jar</packaging>
 
 <name>FlySpeed</name>
@@ -26,20 +26,17 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<repositories>
-		<repository>
-		  <id>server-files</id>
-		  <url>file://${project.basedir}/libs/server-files</url>
-		</repository>
-		<repository>
-		  <id>other-plugins</id>
-		  <url>file://${project.basedir}/libs/other-plugins</url>
-		</repository>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
 	</repositories>
 	<dependencies>
-		<dependency>
-			<groupId>org</groupId>
-			<artifactId>bukkit</artifactId>
-			<version>1.7.10</version>
-		</dependency>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.16.1-R0.1-SNAPSHOT</version>
+            <type>jar</type>
+        </dependency>
 	</dependencies>
 </project>

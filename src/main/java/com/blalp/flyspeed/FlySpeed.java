@@ -9,9 +9,18 @@ public class FlySpeed extends JavaPlugin {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
 		if(cmd.getName().equals("flyspeed")&&sender.hasPermission("fly.speed")){
 			if(args.length==0){
-				sender.sendMessage("You need an arg 0.1-10.");
+				sender.sendMessage("Specify how much faster 1 to 10 (you can also do negative, but not reccomended xD)");
+				sender.sendMessage("Usage: to increase flight speed 2x /flyspeed 2");
 			} else {
-				((Player)sender).setFlySpeed(Float.parseFloat(args[0]));
+				try {
+					if (Float.parseFloat(args[0])<-10||Float.parseFloat(args[0])>10){
+						sender.sendMessage("The max is a speed multiplier of 10");
+					}
+				} catch (Exception e){
+					sender.sendMessage("Please specify a number.");
+				}
+				((Player)sender).setFlySpeed(Float.parseFloat(args[0])/10);
+				sender.sendMessage("Set flyspeed to "+Float.parseFloat(args[0])/10+"x normal");
 			}
 			return true;
 		}
