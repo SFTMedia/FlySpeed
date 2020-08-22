@@ -19,6 +19,7 @@ public class FlySpeed extends JavaPlugin {
 					}
 				} catch (Exception e){
 					sender.sendMessage("Please specify a number.");
+					return true;
 				}
 				((Player)sender).setFlySpeed(Float.parseFloat(args[0])/10);
 				sender.sendMessage("Set flyspeed to "+Float.parseFloat(args[0])/10+"x normal");
