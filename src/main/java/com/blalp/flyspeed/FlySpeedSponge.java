@@ -20,7 +20,7 @@ import org.spongepowered.api.event.game.state.GameStartedServerEvent;
 import org.spongepowered.api.plugin.Plugin;
 import org.spongepowered.api.text.Text;
 
-@Plugin(id = "flyspeed", name = "FlySpeed", version = "1.0", description = "Sets Flyspeed", authors = {
+@Plugin(id = "flyspeed", name = "FlySpeed", version = "1.2.0", description = "Sets Flyspeed", authors = {
         "blalp" })
 public class FlySpeedSponge implements CommandExecutor {
     private HashMap<UUID,Double> flyspeed = new HashMap<>();
